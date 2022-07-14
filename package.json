@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 81",
+    "build": "next build",
+    "start": "next start -p 81",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prefresh/next": "^1.5.2",
+    "furtive": "^2.4.0",
+    "next": "^12.2.2",
+    "next-plugin-preact": "^3.0.7",
+    "preact": "^10.10.0",
+    "preact-render-to-string": "^5.2.1",
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat",
+    "react-ssr-prepass": "npm:preact-ssr-prepass"
+  }
+}

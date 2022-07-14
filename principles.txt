@@ -1,0 +1,5 @@
+htm
+css
+keep js and css together
+    https://en.bem.info/methodology/filestructure/#guidelines-for-the-file-structure-of-a-bem-project
+    
