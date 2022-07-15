@@ -1,0 +1,3 @@
+addeventlistener properly
+https://linguinecode.com/post/react-onclick-event-vs-js-addeventlistener
+https://preactjs.com/guide/v8/api-reference/#lifecycle-methods

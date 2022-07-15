@@ -1,5 +1,5 @@
-import React from "react";
+import { html } from "htm/preact";
 
 export default function LazyComp() {
-  return <div>Hi Lazy!</div>;
+  return html`<p>Hi Lazy!</p>`;
 }

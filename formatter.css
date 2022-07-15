@@ -1,0 +1,16 @@
+#sm-md-nav-menu,
+#sm-md-nav-logo,
+#lg-nav-menu,
+#lg-nav-logo {
+  margin: 0;
+}
+@media screen and (min-width: 64rem) {
+  #sm-md-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 64rem) {
+  #lg-nav {
+    display: none;
+  }
+}

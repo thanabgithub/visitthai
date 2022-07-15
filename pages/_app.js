@@ -1,7 +1,6 @@
-import './_app.css';
+import Layout from "../components/_app/Layout";
+import { html } from "htm/preact";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export default function App({ Component, pageProps }) {
+  return html`<${Layout}> <${Component} ...${pageProps} //> <//> `;
 }
-
-export default MyApp;

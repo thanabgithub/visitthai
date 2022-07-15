@@ -1,17 +1,15 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import { html } from "htm/preact";
 
-const Lazy = dynamic(() => import('../lazy'));
+const Lazy = dynamic(() => import("../lazy"));
 
 export default function IndexPage() {
-  return (
+  return html`
     <div>
-      Hello world!
-      <Head>
-        <link rel="stylesheet" href="http://example.org" />
-      </Head>
-      <Lazy />
+      <h4>Hello world!</h1>
+      <${Head}> <//>
+      <${Lazy} class="h5" />
     </div>
-  );
+  `;
 }

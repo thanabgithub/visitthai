@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
-
+import { useEffect } from "react";
+import { html } from "htm/preact";
 export default function ErrorPage() {
   if (!process.browser) {
-    return <div>SSR is ok, client will throw inside useEffect...</div>;
+    return html`<div>SSR is ok, client will throw inside useEffect...</div>`;
   }
 
   useEffect(() => {
-    throw new Error('test');
+    throw new Error("test");
   }, []);
 
-  return <div />;
+  return html`<div />`;
 }
