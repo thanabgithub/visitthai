@@ -1,5 +1,9 @@
 import { html } from "htm/preact";
 function StyleCustom() {
+  const smThres = 32;
+  const mdThres = 48;
+  const lgThres = 64;
+
   return html`<style>
     body {
       margin: 0;
@@ -227,7 +231,7 @@ function StyleCustom() {
       -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
     }
-    @media screen and (min-width: 32rem) {
+    @media screen and (min-width: calc(${smThres} * 1rem)) {
       .grd-row-col-1-6--sm {
         max-width: 16.6666666667%;
         -ms-flex-preferred-size: 16.6666666667%;
@@ -259,7 +263,7 @@ function StyleCustom() {
         flex-basis: 100%;
       }
     }
-    @media screen and (min-width: 48rem) {
+    @media screen and (min-width: calc(${mdThres} * 1rem)) {
       .grd-row-col-1-6--md {
         max-width: 16.6666666667%;
         -ms-flex-preferred-size: 16.6666666667%;
@@ -291,7 +295,7 @@ function StyleCustom() {
         flex-basis: 100%;
       }
     }
-    @media screen and (min-width: 64rem) {
+    @media screen and (min-width: calc(${lgThres} * 1rem)) {
       .grd-row-col-1-6--lg {
         max-width: 16.6666666667%;
         -ms-flex-preferred-size: 16.6666666667%;
@@ -329,7 +333,7 @@ function StyleCustom() {
       box-sizing: border-box;
     }
     .measure {
-      max-width: 48rem;
+      max-width: calc(${mdThres} * 1rem);
       margin: 0 auto;
     }
     a {
@@ -463,12 +467,12 @@ function StyleCustom() {
     html {
       font-size: 12px;
     }
-    @media screen and (min-width: 32rem) and (max-width: 48rem) {
+    @media screen and (min-width: calc(${smThres} * 1rem)) and (max-width: calc(${mdThres} * 1rem)) {
       html {
         font-size: 15px;
       }
     }
-    @media screen and (min-width: 48rem) {
+    @media screen and (min-width: calc(${mdThres} * 1rem)) {
       html {
         font-size: 16px;
       }
@@ -591,7 +595,7 @@ function StyleCustom() {
       width: 100%;
       display: block;
     }
-    @media screen and (min-width: 32rem) {
+    @media screen and (min-width: calc(${smThres} * 1rem)) {
       .w100--s {
         width: auto;
         display: inline-block;
@@ -743,6 +747,16 @@ function StyleCustom() {
       padding: 0.25rem;
       word-wrap: normal;
       line-height: 1;
+    }
+    @media screen and (max-width: calc(${lgThres} * 1rem)) {
+      .on-off-side-area--grid
+        .on-off-side-area--row
+        .on-off-side-area--left-dummy,
+      .on-off-side-area--grid
+        .on-off-side-area--row
+        .on-off-side-area--right-dummy {
+        width: auto;
+      }
     }
   </style>`;
 }

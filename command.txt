@@ -1,1 +1,4 @@
 npm install --legacy-peer-deps
+
+random
+openssl rand -base64 12

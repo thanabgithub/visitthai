@@ -4,30 +4,23 @@ import StyleNormalize from "./layout/StyleNormalize";
 import StyleCustom from "./layout/StyleCustom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
+import { Fragment } from "preact";
+import OnOffSideAreaWrapper from "../commons/OnOffSideAreaWrapper";
 function Layout(props) {
   return html`
-    <div class="grd p0">
-      <div class="grd-row p0 ">
-        <div id="lg-dummy-space-l" class="grd-row-col-1-6"></div>
-        <div class="grd-row-col-4-6--lg">
-          <${Navbar} />
-          <main>${props.children}</main>
-          <${Footer} />
-        </div>
-        <div id="lg-dummy-space-r" class="grd-row-col-1-6 center"></div>
-        <${StyleNormalize} />
-        <${StyleCustom} />
-      </div>
-      <style global>
-        @media screen and (max-width: 64rem) {
-          #lg-dummy-space-l,
-          #lg-dummy-space-r {
-            width: auto;
-          }
-        }
+    <${Fragment}>
+      <${OnOffSideAreaWrapper}>
+        <${Navbar} />
+      <//>
+      ${props.children}
+      <${OnOffSideAreaWrapper}>
+        <${Footer} />
+      <//>
+      <${StyleNormalize} />
+      <${StyleCustom} />
+      <style>
       </style>
-    </div>
+    <//>
   `;
 }
 

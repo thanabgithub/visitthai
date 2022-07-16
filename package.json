@@ -13,18 +13,20 @@
     "@babel/plugin-syntax-jsx": "^7.18.6",
     "@nextui-org/react": "^1.0.0-beta.9",
     "@prefresh/next": "^1.5.2",
-    "babel-plugin-htm": "^3.0.0",
     "furtive": "^2.4.0",
     "htm": "^3.1.1",
+    "material-design-lite": "^1.3.0",
+    "mini.css": "^3.0.1",
     "next": "^12.2.2",
     "next-plugin-preact": "^3.0.7",
     "preact": "^10.10.0",
+    "preact-material-components": "^1.6.1",
+    "preact-mdl": "^2.2.2",
     "preact-render-to-string": "^5.2.1",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
     "react-iconly": "^2.2.5",
     "react-ssr-prepass": "npm:preact-ssr-prepass",
-    "spectre.css": "^0.5.9",
-    "unlimitedgrid": "^2.4.2"
+    "spectre.css": "^0.5.9"
   }
 }

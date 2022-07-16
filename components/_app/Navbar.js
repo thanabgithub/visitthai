@@ -20,7 +20,7 @@ function Navbar() {
   return html`<${Fragment}>
     <div class="grd p0">
       <div id="lg-nav" class="grd-row p1">
-        <div id="lg-nav--logo" class="grd-row-col-1-6 bold"><${Logo} /></div>
+        <div id="lg-nav--logo" class="grd-row-col-1-6 bold">2rem 1/6vw</div>
         <div id="lg-nav--menu" class="grd-row-col-3-6 txt--center h4">
           large
         </div>
@@ -51,7 +51,7 @@ function Navbar() {
       <div id="sm-md-nav" class="grd-row p1">
         <div id="sm-md-nav--menu" class="grd-row-col-1-6 h4 bold">☰</div>
         <div id="sm-md-nav--logo" class="grd-row-col-4-6 txt--center h4">
-          logo
+          2rem 1/6vw
         </div>
         <div class="grd-row-col-1-6 txt--right">
           <div class="grd p0">
