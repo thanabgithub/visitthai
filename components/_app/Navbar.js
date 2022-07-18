@@ -18,18 +18,15 @@ function Logo() {
 import { SearchOutlined, HeartOutlined } from "@ant-design/icons";
 function Navbar() {
   return html`<${Fragment}>
-    <div class="grd p0">
-      <div id="lg-nav" class="grd-row p1">
-        <div id="lg-nav--logo" class="grd-row-col-1-6 bold">2rem 1/6vw</div>
-        <div id="lg-nav--menu" class="grd-row-col-3-6 txt--center h4">
-          large
-        </div>
+    <div class="grd p0 local_nav--grid">
+      <div id="lg-nav" class="grd-row p1 local_nav--grid--row">
+        <div class="grd-row-col-1-6 bold">2rem 1/6vw</div>
+        <div class="grd-row-col-3-6 txt--center h4">large</div>
         <div class="grd-row-col-2-6">
           <div class="grd p0">
             <div class="grd-row p0 justify">
               <div
-                id="lg-nav--menu--favourite"
-                class="grd-row-col-1-6 h4 bold "
+                class="grd-row-col-1-6 h4 bold local_nav--grid--row--favorite"
               >
                 <${HeartOutlined} />
               </div>
@@ -37,10 +34,7 @@ function Navbar() {
                 <input type="search" placeholder="Search" class="my0" />
               </div>
 
-              <div
-                id="lg-nav--menu--search"
-                class="grd-row-col-2-6 h4 bold txt--center"
-              >
+              <div class="grd-row-col-2-6 h4 bold txt--center">
                 <${SearchOutlined} />
               </div>
             </div>
@@ -48,21 +42,18 @@ function Navbar() {
         </div>
       </div>
 
-      <div id="sm-md-nav" class="grd-row p1">
-        <div id="sm-md-nav--menu" class="grd-row-col-1-6 h4 bold">☰</div>
-        <div id="sm-md-nav--logo" class="grd-row-col-4-6 txt--center h4">
-          2rem 1/6vw
-        </div>
+      <div id="sm-md-nav" class="grd-row p1 local_nav--grid--row">
+        <div class="grd-row-col-1-6 h4 bold">☰</div>
+        <div class="grd-row-col-4-6 txt--center h4">2rem 1/6vw</div>
         <div class="grd-row-col-1-6 txt--right">
           <div class="grd p0">
             <div class="grd-row p0">
               <div
-                id="sm-md-nav--menu--favourite"
-                class="grd-row-col-3-6 h4 bold"
+                class="grd-row-col-3-6 h4 bold local_nav--grid--row--favorite"
               >
                 <${HeartOutlined} />
               </div>
-              <div id="sm-md-nav--menu--search" class="grd-row-col-3-6 h4 bold">
+              <div class="grd-row-col-3-6 h4 bold">
                 <${SearchOutlined} />
               </div>
             </div>
@@ -71,23 +62,19 @@ function Navbar() {
       </div>
     </div>
     <style>
-      #lg-nav--menu--favourite,
-      #lg-nav--menu--search,
-      #sm-md-nav--menu--favourite,
-      #sm-md-nav--menu--search,
-      #sm-md-nav--menu,
-      #sm-md-nav--logo,
-      #lg-nav--menu,
-      #lg-nav--logo {
+      .local_nav--grid .local_nav--grid--row * {
         margin: 0;
         padding: auto;
       }
-      #lg-nav--menu--favourite:active,
-      #lg-nav--menu--favourite:focus,
-      #lg-nav--menu--favourite:hover,
-      #sm-md-nav--menu--favourite:active,
-      #sm-md-nav--menu--favourite:focus,
-      #sm-md-nav--menu--favourite:hover {
+      .local_nav--grid
+        .local_nav--grid--row
+        .local_nav--grid--row--favorite:active,
+      .local_nav--grid
+        .local_nav--grid--row
+        .local_nav--grid--row--favorite:focus,
+      .local_nav--grid
+        .local_nav--grid--row
+        .local_nav--grid--row--favorite:hover {
         color: #e74c3c;
       }
 

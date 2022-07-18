@@ -9,7 +9,7 @@ export default function Home() {
       >
       <section class="tab-group">
         <article class="tab">
-          <input id="tab-one" type="radio" name="tabs" checked />
+          <input id="tab-one" type="checkbox" name="tabs" checked />
           <label for="tab-one">What is CSS Friday?</label>
           <div class="tab-content">
             <p>
@@ -22,7 +22,7 @@ export default function Home() {
         </article>
 
         <article class="tab">
-          <input id="tab-two" type="radio" name="tabs" />
+          <input id="tab-two" type="checkbox" name="tabs" />
           <label for="tab-two">How it's diffrent than other CSS courses?</label>
           <div class="tab-content">
             <p>
@@ -43,7 +43,7 @@ export default function Home() {
         </article>
 
         <article class="tab">
-          <input id="tab-three" type="radio" name="tabs" />
+          <input id="tab-three" type="checkbox" name="tabs" />
           <label for="tab-three"
             >Is there any course completion certificate?</label
           >
@@ -58,7 +58,7 @@ export default function Home() {
         </article>
 
         <article class="tab">
-          <input id="tab-four" type="radio" name="tabs" />
+          <input id="tab-four" type="checkbox" name="tabs" />
           <label for="tab-four">Who's the author of the course?</label>
           <div class="tab-content">
             <p>
