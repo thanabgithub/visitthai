@@ -1,0 +1,19 @@
+{
+  "presets": ["next/babel"],
+
+  "plugins": [
+    [
+      "babel-plugin-htm",
+      {
+        "pragma": "React.createElement",
+        "import": {
+          // the module to import:
+          "tag": "html",
+          "module": "react",
+          // a named export to use from that module:
+          "export": "default"
+        }
+      }
+    ]
+  ]
+}

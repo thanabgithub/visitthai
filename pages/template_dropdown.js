@@ -1,5 +1,6 @@
 import { html } from "htm/preact";
 import Link from "next/link";
+import { h, Component, render } from "preact";
 export default function Home() {
   let uniqueId = new Date();
   return html`

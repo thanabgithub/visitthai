@@ -1,5 +1,3 @@
-import { html } from "htm/preact";
-
 function Test() {
   return (
     <div className="grd-row">

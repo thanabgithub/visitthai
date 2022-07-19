@@ -1,7 +1,5 @@
 import { html } from "htm/preact";
 
-import StyleNormalize from "./layout/StyleNormalize";
-import StyleCustom from "./layout/StyleCustom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Fragment } from "preact";
@@ -9,17 +7,17 @@ import OnOffSideAreaWrapper from "../commons/OnOffSideAreaWrapper";
 function Layout(props) {
   return html`
     <${Fragment}>
-      <${OnOffSideAreaWrapper}>
-        <${Navbar} />
-      <//>
+      <header class="shadows">
+        <${OnOffSideAreaWrapper}>
+          <main><${Navbar} /></main>
+        <//>
+      </header>
       ${props.children}
-      <${OnOffSideAreaWrapper}>
-        <${Footer} />
-      <//>
-      <${StyleNormalize} />
-      <${StyleCustom} />
-      <style>
-      </style>
+      <footer>
+        <${OnOffSideAreaWrapper}>
+          <${Footer} />
+        <//>
+      </footer>
     <//>
   `;
 }
