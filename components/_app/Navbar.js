@@ -18,6 +18,34 @@ function Logo() {
 import { SearchOutlined, HeartOutlined } from "@ant-design/icons";
 function Navbar() {
   return html`<${Fragment}>
+    <style amp-custom>
+      .local_nav--grid .local_nav--grid--row * {
+        margin: 0;
+        padding: auto;
+      }
+      .local_nav--grid
+        .local_nav--grid--row
+        .local_nav--grid--row--favorite:active,
+      .local_nav--grid
+        .local_nav--grid--row
+        .local_nav--grid--row--favorite:focus,
+      .local_nav--grid
+        .local_nav--grid--row
+        .local_nav--grid--row--favorite:hover {
+        color: #e74c3c;
+      }
+
+      @media screen and (min-width: 64rem) {
+        #sm-md-nav {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 64rem) {
+        #lg-nav {
+          display: none;
+        }
+      }
+    </style>
     <div class="grd p0 local_nav--grid">
       <div id="lg-nav" class="grd-row p1 local_nav--grid--row">
         <div class="grd-row-col-1-6 bold">2rem 1/6vw</div>
@@ -61,35 +89,7 @@ function Navbar() {
         </div>
       </div>
     </div>
-    <style>
-      .local_nav--grid .local_nav--grid--row * {
-        margin: 0;
-        padding: auto;
-      }
-      .local_nav--grid
-        .local_nav--grid--row
-        .local_nav--grid--row--favorite:active,
-      .local_nav--grid
-        .local_nav--grid--row
-        .local_nav--grid--row--favorite:focus,
-      .local_nav--grid
-        .local_nav--grid--row
-        .local_nav--grid--row--favorite:hover {
-        color: #e74c3c;
-      }
-
-      @media screen and (min-width: 64rem) {
-        #sm-md-nav {
-          display: none;
-        }
-      }
-      @media screen and (max-width: 64rem) {
-        #lg-nav {
-          display: none;
-        }
-      }
-    </style><//
-  >`;
+  <//>`;
 }
 // .grd .grd-row .grid-row__item_end {
 //     justify-self: end;

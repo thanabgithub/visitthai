@@ -54,20 +54,20 @@ export default function Home() {
       <${Script}> console.log('from draft_carousel_bentojs htm script')<//>
       <bento-base-carousel id="my-carousel-1">
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/puppies.jpg"
           alt="Example image: banana "
         />
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/hamsters.jpg"
           alt="Example image: bento box"
         />
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/kittens.jpg"
           alt="Example image: avocado"
         />
@@ -84,20 +84,20 @@ export default function Home() {
       </bento-base-carousel>
       <bento-base-carousel id="my-carousel-2">
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/puppies.jpg"
           alt="Example image: banana "
         />
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/hamsters.jpg"
           alt="Example image: bento box"
         />
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/kittens.jpg"
           alt="Example image: avocado"
         />
@@ -114,20 +114,20 @@ export default function Home() {
       </bento-base-carousel>
       <bento-base-carousel id="my-carousel-1">
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/puppies.jpg"
           alt="Example image: banana "
         />
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/hamsters.jpg"
           alt="Example image: bento box"
         />
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/kittens.jpg"
           alt="Example image: avocado"
         />
@@ -144,20 +144,20 @@ export default function Home() {
       </bento-base-carousel>
       <bento-base-carousel id="my-carousel-2">
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/puppies.jpg"
           alt="Example image: banana "
         />
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/hamsters.jpg"
           alt="Example image: bento box"
         />
         <img
-          height="1000"
-          width="1000"
+          height="500"
+          width="500"
           src="/images/test/kittens.jpg"
           alt="Example image: avocado"
         />
