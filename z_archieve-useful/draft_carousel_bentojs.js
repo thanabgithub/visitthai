@@ -4,6 +4,126 @@ require("default-passive-events");
 export default function Home() {
   return html`
     <div>
+      <bento-base-carousel id="my-carousel-1">
+        <img
+          height="500"
+          width="500"
+          src="/images/test/puppies.jpg"
+          alt="Example image: banana "
+        />
+        <img
+          height="500"
+          width="500"
+          src="/images/test/hamsters.jpg"
+          alt="Example image: bento box"
+        />
+        <img
+          height="500"
+          width="500"
+          src="/images/test/kittens.jpg"
+          alt="Example image: avocado"
+        />
+        <button
+          slot="next-arrow"
+          class="carousel-next"
+          aria-label="Next"
+        ></button>
+        <button
+          slot="prev-arrow"
+          class="carousel-prev"
+          aria-label="Previous"
+        ></button>
+      </bento-base-carousel>
+      <bento-base-carousel id="my-carousel-2">
+        <img
+          height="500"
+          width="500"
+          src="/images/test/puppies.jpg"
+          alt="Example image: banana "
+        />
+        <img
+          height="500"
+          width="500"
+          src="/images/test/hamsters.jpg"
+          alt="Example image: bento box"
+        />
+        <img
+          height="500"
+          width="500"
+          src="/images/test/kittens.jpg"
+          alt="Example image: avocado"
+        />
+        <button
+          slot="next-arrow"
+          class="carousel-next"
+          aria-label="Next"
+        ></button>
+        <button
+          slot="prev-arrow"
+          class="carousel-prev"
+          aria-label="Previous"
+        ></button>
+      </bento-base-carousel>
+      <bento-base-carousel id="my-carousel-1">
+        <img
+          height="500"
+          width="500"
+          src="/images/test/puppies.jpg"
+          alt="Example image: banana "
+        />
+        <img
+          height="500"
+          width="500"
+          src="/images/test/hamsters.jpg"
+          alt="Example image: bento box"
+        />
+        <img
+          height="500"
+          width="500"
+          src="/images/test/kittens.jpg"
+          alt="Example image: avocado"
+        />
+        <button
+          slot="next-arrow"
+          class="carousel-next"
+          aria-label="Next"
+        ></button>
+        <button
+          slot="prev-arrow"
+          class="carousel-prev"
+          aria-label="Previous"
+        ></button>
+      </bento-base-carousel>
+      <bento-base-carousel id="my-carousel-2">
+        <img
+          height="500"
+          width="500"
+          src="/images/test/puppies.jpg"
+          alt="Example image: banana "
+        />
+        <img
+          height="500"
+          width="500"
+          src="/images/test/hamsters.jpg"
+          alt="Example image: bento box"
+        />
+        <img
+          height="500"
+          width="500"
+          src="/images/test/kittens.jpg"
+          alt="Example image: avocado"
+        />
+        <button
+          slot="next-arrow"
+          class="carousel-next"
+          aria-label="Next"
+        ></button>
+        <button
+          slot="prev-arrow"
+          class="carousel-prev"
+          aria-label="Previous"
+        ></button>
+      </bento-base-carousel>
       <style>
         bento-base-carousel {
           display: block;
@@ -52,126 +172,6 @@ export default function Home() {
         crossorigin="anonymous"
       />
       <${Script}> console.log('from draft_carousel_bentojs htm script')<//>
-      <bento-base-carousel id="my-carousel-1">
-        <img
-          height="500"
-          width="500"
-          src="/images/test/puppies.jpg"
-          alt="Example image: banana "
-        />
-        <img
-          height="500"
-          width="500"
-          src="/images/test/hamsters.jpg"
-          alt="Example image: bento box"
-        />
-        <img
-          height="500"
-          width="500"
-          src="/images/test/kittens.jpg"
-          alt="Example image: avocado"
-        />
-        <button
-          slot="next-arrow"
-          class="carousel-next"
-          aria-label="Next"
-        ></button>
-        <button
-          slot="prev-arrow"
-          class="carousel-prev"
-          aria-label="Previous"
-        ></button>
-      </bento-base-carousel>
-      <bento-base-carousel id="my-carousel-2">
-        <img
-          height="500"
-          width="500"
-          src="/images/test/puppies.jpg"
-          alt="Example image: banana "
-        />
-        <img
-          height="500"
-          width="500"
-          src="/images/test/hamsters.jpg"
-          alt="Example image: bento box"
-        />
-        <img
-          height="500"
-          width="500"
-          src="/images/test/kittens.jpg"
-          alt="Example image: avocado"
-        />
-        <button
-          slot="next-arrow"
-          class="carousel-next"
-          aria-label="Next"
-        ></button>
-        <button
-          slot="prev-arrow"
-          class="carousel-prev"
-          aria-label="Previous"
-        ></button>
-      </bento-base-carousel>
-      <bento-base-carousel id="my-carousel-1">
-        <img
-          height="500"
-          width="500"
-          src="/images/test/puppies.jpg"
-          alt="Example image: banana "
-        />
-        <img
-          height="500"
-          width="500"
-          src="/images/test/hamsters.jpg"
-          alt="Example image: bento box"
-        />
-        <img
-          height="500"
-          width="500"
-          src="/images/test/kittens.jpg"
-          alt="Example image: avocado"
-        />
-        <button
-          slot="next-arrow"
-          class="carousel-next"
-          aria-label="Next"
-        ></button>
-        <button
-          slot="prev-arrow"
-          class="carousel-prev"
-          aria-label="Previous"
-        ></button>
-      </bento-base-carousel>
-      <bento-base-carousel id="my-carousel-2">
-        <img
-          height="500"
-          width="500"
-          src="/images/test/puppies.jpg"
-          alt="Example image: banana "
-        />
-        <img
-          height="500"
-          width="500"
-          src="/images/test/hamsters.jpg"
-          alt="Example image: bento box"
-        />
-        <img
-          height="500"
-          width="500"
-          src="/images/test/kittens.jpg"
-          alt="Example image: avocado"
-        />
-        <button
-          slot="next-arrow"
-          class="carousel-next"
-          aria-label="Next"
-        ></button>
-        <button
-          slot="prev-arrow"
-          class="carousel-prev"
-          aria-label="Previous"
-        ></button>
-      </bento-base-carousel>
     </div>
   `;
 }

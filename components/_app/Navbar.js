@@ -6,8 +6,8 @@ import { Image } from "@nextui-org/react";
 function Logo() {
   return html`
     <${Image}
-      src="/images/logo/apple-touch-icon.webp"
-      alt="visitthai"
+      src="/images/logo/favicon-32x32.webp"
+      alt="SpeedWeb"
       width="2rem"
       height="2rem"
       objectFit="cover"
@@ -18,7 +18,18 @@ function Logo() {
 import { SearchOutlined, HeartOutlined } from "@ant-design/icons";
 function Navbar() {
   return html`<${Fragment}>
-    <style amp-custom>
+  <head>
+
+    <style>
+      amp-sidebar {
+        will-change:auto;
+        transition: all 0.3s;
+      }
+
+      amp-sidebar:not([open]) {
+        display: none !important;
+      }
+
       .local_nav--grid .local_nav--grid--row * {
         margin: 0;
         padding: auto;
@@ -45,48 +56,48 @@ function Navbar() {
           display: none;
         }
       }
-    </style>
-    <div class="grd p0 local_nav--grid">
-      <div id="lg-nav" class="grd-row p1 local_nav--grid--row">
-        <div class="grd-row-col-1-6 bold">2rem 1/6vw</div>
-        <div class="grd-row-col-3-6 txt--center h4">large</div>
-        <div class="grd-row-col-2-6">
-          <div class="grd p0">
-            <div class="grd-row p0 justify">
-              <div
-                class="grd-row-col-1-6 h4 bold local_nav--grid--row--favorite"
-              >
-                <${HeartOutlined} />
-              </div>
-              <div class="grd-row-col-3-6 h6 thin small">
-                <input type="search" placeholder="Search" class="my0" />
-              </div>
+      #sm-md-nav--sidebar-button {
+        background-color: inherit;
+        border: none;
+      }
 
-              <div class="grd-row-col-2-6 h4 bold txt--center">
-                <${SearchOutlined} />
-              </div>
-            </div>
-          </div>
-        </div>
+      #sidebar-menu {
+        padding: 1rem;
+      }
+      ul li a {
+        color: inherit;
+        text-decoration: none;
+      }
+    </style>
+    </head>
+    <div class="grd p0 local_nav--grid">
+      <div id="lg-nav" class="grd-row p0 local_nav--grid--row adj-pos">
+        <div class="grd-row-col-2-6 txt--center h3">σ SpeedWeb</div>
+        <div class="grd-row-col-4-6 txt--center h4">List of Menu</div>
+
       </div>
 
-      <div id="sm-md-nav" class="grd-row p1 local_nav--grid--row">
-        <div class="grd-row-col-1-6 h4 bold">☰</div>
-        <div class="grd-row-col-4-6 txt--center h4">2rem 1/6vw</div>
-        <div class="grd-row-col-1-6 txt--right">
-          <div class="grd p0">
-            <div class="grd-row p0">
-              <div
-                class="grd-row-col-3-6 h4 bold local_nav--grid--row--favorite"
-              >
-                <${HeartOutlined} />
-              </div>
-              <div class="grd-row-col-3-6 h4 bold">
-                <${SearchOutlined} />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div id="sm-md-nav" class="grd-row p1 local_nav--grid--row adj-pos">
+        <button
+          id="sm-md-nav--sidebar-button"
+          on="tap:sidebar1"
+          class="grd-row-col-1-6 h3 bold"
+        >
+          ☰
+        </button>
+
+        <div class="grd-row-col-5-6 txt--center h3 adj-pos">σ SpeedWeb</div>
+        <amp-sidebar id="sidebar1" layout="nodisplay" style="width:20rem">
+          <ul id="sidebar-menu" style="list-style: none;">
+            <li>
+              <a href="#" class="h4">Link</a>
+            </li>
+
+            <li>
+              <a href="#" class="h4">Link</a>
+            </li>
+          </ul>
+        </amp-sidebar>
       </div>
     </div>
   <//>`;

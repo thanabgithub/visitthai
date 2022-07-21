@@ -15,11 +15,31 @@ export default function Home() {
   }
 
   const handlePointerDown = async(evt) => {
+    const navigator = window.navigator;
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
 
+    function success(pos) {
+      const crd = pos.coords;
+
+      console.log('Your current position is:');
+      console.log(`Latitude : ${crd.latitude}`);
+      console.log(`Longitude: ${crd.longitude}`);
+      console.log(`More or less ${crd.accuracy} meters.`);
+    }
+
+    function error(err) {
+      console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+
+    console.log(navigator.geolocation.getCurrentPosition(success, error, options));
     if (evt.pointerType === "touch") {
-      const navigator = window.navigator;
-      navigator.vibrate(1000000000);
-      }
+
+    navigator.vibrate(1000000000);
+  }
     audioButtonPointerDown.play();
     audioButtonPointerDown.currentTime=0;
   }
@@ -32,15 +52,8 @@ export default function Home() {
     }
     audioButtonPointerUp.currentTime=0;
   }
-  const handlePointerLeave = async(evt) => {
-
-    if (evt.pointerType === "touch") {
-      const navigator = window.navigator;
-      navigator.vibrate(0);
-      audioButtonPointerUp.play();
-      audioButtonPointerUp.currentTime=0;
-    }
-
+  const handleGotPointerCapture = async(evt) => {
+    console.log("handleGotPointerCapture")
   }
   return html`
     <${Fragment}>
@@ -100,13 +113,12 @@ export default function Home() {
             <div class="grd-row p0">
               <div class="grd-row-col-3-6--lg half-screen">
                 <div class="grd-row-col-3-6--lg-centering txt--center">
-                <header>
-                  <h3>Bring your contents alive  <br/> by Faster Response</h3></header>
+                  <h3>Bring your Ideas Alive</h3>
                 </div>
               </div>
               <div class="grd-row-col-3-6--lg half-screen">
                 <div class="grd-row-col-3-6--lg-centering">
-                  <button id="homeWelcomeButton" onpointerenter=${handlePointerEnter} onpointerdown=${handlePointerDown} onpointerleave=${handlePointerLeave} onpointerup=${handlePointerUp} class="h4 hero-button bold ">Interactable</button>
+                  <button id="homeWelcomeButton" onpointerenter=${handlePointerEnter} onpointerdown=${handlePointerDown} gotpointercapture=${handleGotPointerCapture} onpointerup=${handlePointerUp} class="h4 hero-button bold ">Interactable</button>
                 </div>
               </div>
             </div>
@@ -117,8 +129,8 @@ export default function Home() {
         <${OnOffSideAreaWrapper}>
           <div class="grd p0">
             <div class="grd-row p0">
-              <div class="grd-row-col-3-6--lg half-screen">
-                <div class="h3 grd-row-col-3-6--lg-centering  adj-pos txt--center">
+              <div class="grd-row-col-3-6--lg full-screen">
+                <div class="h3 grd-row-col-3-6--lg-centering  adj-pos">
                   Run your App  <br/> on Web Browser
                 </div>
               </div>

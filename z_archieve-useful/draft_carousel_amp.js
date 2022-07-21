@@ -1,34 +1,38 @@
 import { html } from "htm/preact";
-import Script from "next/script";
-import Head from "next/script";
-require("default-passive-events");
-import { Fragment } from "preact";
+
+import dynamic from "next/dynamic";
+const Head = dynamic(() => import("next/head"));
+const Fragment = dynamic(() => import("preact").then((mod) => mod.Fragment));
+
 export default function Page() {
   return html`
     <${Fragment}>
-      <${Script}
-        async
-        custom-element="amp-carousel"
-        src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"
-      />
+      <${Head}><meta name="description" content="Free Web tutorials" /> <//>
+      <head>
+        <script
+          async
+          custom-element="amp-carousel"
+          src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"
+        ></script>
 
-      <${Script}> console.log('from draft_carousel_amp htm script')<//>
-      <style>
-        amp-carousel {
-          display: block;
-          overflow: hidden;
-          position: relative;
-        }
-        amp-carousel {
-          height: 30rem;
-          width: 30rem;
-          margin: auto;
-        }
+        <style>
+          amp-carousel {
+            display: block;
+            overflow: hidden;
+            position: relative;
+          }
+          amp-carousel {
+            height: 30rem;
+            width: 30rem;
+            margin: auto;
+          }
 
-        amp-carousel > * {
-          aspect-ratio: 1/1;
-        }
-      </style>
+          amp-carousel > * {
+            aspect-ratio: 1/1;
+          }
+        </style>
+      </head>
+
       <amp-carousel
         width="500"
         height="500"

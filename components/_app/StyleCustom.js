@@ -9,6 +9,8 @@ function StyleCustom() {
   return html`<style>
     body {
       margin: 0;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
     }
     aside,
     details,
@@ -66,6 +68,7 @@ function StyleCustom() {
       font-family: monospace, monospace;
       font-size: 1em;
     }
+
     button,
     input,
     optgroup,
@@ -74,6 +77,7 @@ function StyleCustom() {
       color: inherit;
       font: inherit;
       margin: 0;
+
     }
     button {
       overflow: visible;
@@ -506,28 +510,28 @@ function StyleCustom() {
     .h1,
     h1 {
       margin-top: 0;
-      font-size: 2.827rem;
+      font-size: 3.998rem;
     }
     .h2,
     h2 {
-      font-size: 1.999rem;
+      font-size: 2.827rem;
     }
     .h3,
     h3 {
-      font-size: 1.414rem;
+      font-size: 1.999rem;
     }
     .h4,
     h4 {
-      font-size: 1.121rem;
+      font-size: 1.414rem;
     }
     .h5,
     h5,
     table th {
-      font-size: 0.88rem;
+      font-size: 1.121rem;
     }
     .h6,
     h6 {
-      font-size: 0.707rem;
+      font-size: 0.88rem;
     }
     .btn--s,
     .small,
@@ -765,6 +769,10 @@ function StyleCustom() {
         0px 0.3px 5.3px rgba(0, 0, 0, 0.016), 0px 0.6px 10px rgba(0, 0, 0, 0.02),
         0px 1.1px 17.9px rgba(0, 0, 0, 0.024),
         0px 2.1px 33.4px rgba(0, 0, 0, 0.029), 0px 5px 80px rgba(0, 0, 0, 0.04);
+    }
+    .adj-pos {
+      justify-content: center;
+      align-items: center;
     }
   </style>`;
 }
