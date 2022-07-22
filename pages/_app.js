@@ -10,9 +10,6 @@ const Head = dynamic(() => import("next/head"));
 export default function App({ Component, pageProps }) {
   return html`<${Head}
       ><title>SpeedWeb</title>
-
-
-
       <meta name="viewport" content="width=device-width, initial-scale=1"
     /><//>
     <head>
@@ -24,6 +21,6 @@ export default function App({ Component, pageProps }) {
     ></script>
     <${StyleNormalize} />
     <${StyleCustom} />
-    </head>
-    <${Layout}><${Component} ...${pageProps} /><//>`;
+    </head><body>
+    <${Layout}><${Component} ...${pageProps} /><//></body>`;
 }
