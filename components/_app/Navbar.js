@@ -15,7 +15,6 @@ function Logo() {
   `;
 }
 
-import { SearchOutlined, HeartOutlined } from "@ant-design/icons";
 function Navbar() {
   return html`<${Fragment}>
   <head>

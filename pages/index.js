@@ -56,10 +56,11 @@ export default function Home() {
             color: #434343;
             padding: auto;
             margin: auto;
-            font-size: 1rem;
+            font-size: 1.5rem;
             border-radius: 0.5em;
-            width: min(35vh,11rem);
+            aspect-ratio: 1;
             height: min(35vh,11rem);
+            width: auto;
             background: #f5f5f5;
             border: 1px solid #f5f5f5;
             transition: all .3s;
@@ -78,13 +79,13 @@ export default function Home() {
 
           }
           .grd-row .half-screen {
-            height: max(45vh,30rem);
+            height: 45vh;
           }
           .grd-row .full-screen {
-            height: max(90vh, 60rem);
+            height: 90vh;
           }
 
-          .grd-row-col-3-6--lg .grd-row-col-3-6--lg-centering * {
+          .grd-row-col-3-6--lg .grd-row-col-3-6--lg-centering .grd-row-col-3-6--lg-centering--fit * {
             margin: 0;
           }
 
@@ -105,8 +106,8 @@ export default function Home() {
                 </div>
               </div>
               <div class="grd-row-col-3-6--lg half-screen">
-                <div class="grd-row-col-3-6--lg-centering">
-                  <button id="homeWelcomeButton" onpointerenter=${handlePointerEnter} onpointerdown=${handlePointerDown} onpointerleave=${handlePointerLeave} onpointerup=${handlePointerUp} class="h4 hero-button bold ">Interactable</button>
+                <div class="grd-row-col-3-6--lg-centering grd-row-col-3-6--lg-centering--fit">
+                  <button id="homeWelcomeButton" onpointerenter=${handlePointerEnter} onpointerdown=${handlePointerDown} onpointerleave=${handlePointerLeave} onpointerup=${handlePointerUp} class="hero-button bold ">Interactable</button>
                 </div>
               </div>
             </div>
@@ -118,13 +119,13 @@ export default function Home() {
           <div class="grd p0">
             <div class="grd-row p0">
               <div class="grd-row-col-3-6--lg half-screen">
-                <div class="h3 grd-row-col-3-6--lg-centering  adj-pos txt--center">
+                <div class="h3 grd-row-col-3-6--lg-centering txt--center">
                   Run your App  <br/> on Web Browser
                 </div>
               </div>
 
-              <div class="grd-row-col-3-6--lg full-screen">
-                <div>
+              <div class="grd-row-col-3-6--lg-centering grd-row-col-3-6--lg full-screen">
+                <div z>
                   <${Calculator} />
                 </div>
               </div>
