@@ -7,8 +7,9 @@ import OnOffSideAreaWrapper from "/components/commons/OnOffSideAreaWrapper";
 import { useRouter } from 'next/router';
 
 const _URL = `https://content.guardianapis.com/search`;
-const REQUEST_PARAM = `?show-tags=contributor&show-fields=starRating,headline,thumbnail,short-url&show-refinements=all&order-by=relevance`;
+const REQUEST_PARAM = `?q=japan&show-tags=contributor,tone&show-fields=headline,thumbnail,wordcount,isLive,bodyText,lastModified&order-by=relevance`;
 const API_KEY_PARAM = `&api-key=${process.env.NEXT_PUBLIC_API_KEY}`;
+// const REQUEST_PARAM = `?show-tags=contributor&show-fields=starRating,headline,thumbnail,short-url&show-refinements=all&order-by=relevance`;
 // URL += `?show-fields=all&show-section=true&show-blocks=all&show-elements=all&show-related=true`;
 // tags api is http
 // const URL = `https://content.guardianapis.com/tag?api-key=${process.env.NEXT_PUBLIC_API_KEY}`;

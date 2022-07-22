@@ -10,7 +10,6 @@ function StyleCustom() {
     body {
       margin: 0;
       -webkit-tap-highlight-color: transparent;
-      user-select: none;
     }
     aside,
     details,
