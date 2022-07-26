@@ -3,8 +3,9 @@ function StyleNormalize() {
   return html`<style>
     html {
       font-family: sans-serif;
-      -ms-text-size-adjust: 100%;
-      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
     }
     body {
       margin: 0;

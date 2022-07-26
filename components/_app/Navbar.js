@@ -20,14 +20,6 @@ function Navbar() {
   <head>
 
     <style>
-      amp-sidebar {
-        will-change:auto;
-        transition: all 0.3s;
-      }
-
-      amp-sidebar:not([open]) {
-        display: none !important;
-      }
 
       .local_nav--grid .local_nav--grid--row * {
         margin: 0;
@@ -45,12 +37,12 @@ function Navbar() {
         color: #e74c3c;
       }
 
-      @media screen and (min-width: 64rem) {
+      @media screen and (min-width: 32rem) {
         #sm-md-nav {
           display: none;
         }
       }
-      @media screen and (max-width: 64rem) {
+      @media screen and (max-width: 32rem) {
         #lg-nav {
           display: none;
         }
@@ -60,20 +52,13 @@ function Navbar() {
         border: none;
       }
 
-      #sidebar-menu {
-        padding: 1rem;
-      }
-      ul li a {
-        color: inherit;
-        text-decoration: none;
-      }
+
     </style>
     </head>
     <div class="grd p0 local_nav--grid">
       <div id="lg-nav" class="grd-row p0 local_nav--grid--row adj-pos">
         <div class="grd-row-col-2-6 txt--center h3">σ SpeedWeb</div>
         <div class="grd-row-col-4-6 txt--center h4">List of Menu</div>
-
       </div>
 
       <div id="sm-md-nav" class="grd-row p1 local_nav--grid--row adj-pos">
@@ -86,17 +71,6 @@ function Navbar() {
         </button>
 
         <div class="grd-row-col-5-6 txt--center h3 adj-pos">σ SpeedWeb</div>
-        <amp-sidebar id="sidebar1" layout="nodisplay" style="width:20rem">
-          <ul id="sidebar-menu" style="list-style: none;">
-            <li>
-              <a href="#" class="h4">Link</a>
-            </li>
-
-            <li>
-              <a href="#" class="h4">Link</a>
-            </li>
-          </ul>
-        </amp-sidebar>
       </div>
     </div>
   <//>`;

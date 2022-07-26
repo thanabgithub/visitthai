@@ -3,13 +3,17 @@ import { html } from "htm/preact";
 // https://brumm.af/shadows
 function StyleCustom() {
   const smThres = 32;
-  const mdThres = 48;
-  const lgThres = 64;
+  const mdThres = 36;
+  const lgThres = 40;
 
   return html`<style>
     body {
+      --screen-cus-unit-nkq: min(1vh, 1vw);
       margin: 0;
       -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation; /* disable double-tab zoom iOS */
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); /* https://css-tricks.com/the-notch-and-css/ */
+      box-sizing: border-box;
     }
     aside,
     details,
@@ -80,6 +84,9 @@ function StyleCustom() {
     }
     button {
       overflow: visible;
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
     }
     button,
     select {
@@ -111,7 +118,7 @@ function StyleCustom() {
     }
     input[type="search"] {
       -webkit-appearance: textfield;
-      box-sizing: content-box;
+      box-sizing: border-box;
     }
     input[type="search"]::-webkit-search-cancel-button,
     input[type="search"]::-webkit-search-decoration {
@@ -763,6 +770,7 @@ function StyleCustom() {
         width: auto;
       }
     }
+
     .shadows {
       box-shadow: 0px 0.1px 2.2px rgba(0, 0, 0, 0.011),
         0px 0.3px 5.3px rgba(0, 0, 0, 0.016), 0px 0.6px 10px rgba(0, 0, 0, 0.02),
@@ -772,6 +780,34 @@ function StyleCustom() {
     .adj-pos {
       justify-content: center;
       align-items: center;
+    }
+    .shadow-lknxy {
+      --border-radius-01: calc(1.5*var(--screen-cus-unit-nkq));
+      --shade-01: #72727480;
+      --shade-02: #cccdd186;
+      --shade-03: #f3f4f87c;
+      --shade-04: #ffffff7c;
+
+      --shade-len-01: calc(0.3*var(--border-radius-01));
+      --shade-len-02: calc(0.4*var(--border-radius-01));
+
+      --borderWidth: 10px;
+
+      border-radius: var(--border-radius-01);
+      border: none;
+      box-shadow:
+        var(--shade-len-01) var(--shade-len-01) var(--shade-len-01) var(--shade-04) inset,
+        calc(-1*var(--shade-len-01)) calc(-1*var(--shade-len-01)) var(--shade-len-01) var(--shade-01) inset,
+        var(--shade-len-02) var(--shade-len-02) var(--border-radius-01) var(--shade-01),
+        calc(-1*var(--shade-len-02)) calc(-1*var(--shade-len-02)) var(--border-radius-01) var(--shade-04);
+    }
+
+    .shadow-lknxy:active {
+      box-shadow:
+      var(--shade-len-01) var(--shade-len-01) var(--shade-len-01) var(--shade-04) ,
+      calc(-1*var(--shade-len-01)) calc(-1*var(--shade-len-01)) var(--shade-len-01) var(--shade-01) ,
+      var(--shade-len-02) var(--shade-len-02) var(--border-radius-01) var(--shade-01) inset,
+      calc(-1*var(--shade-len-02)) calc(-1*var(--shade-len-02)) var(--border-radius-01) var(--shade-04) inset;
     }
   </style>`;
 }

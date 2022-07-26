@@ -1,0 +1,63 @@
+    .fade-in {
+        -webkit-animation: fadein 0.3s;
+        -moz-animation: fadein 0.3s;
+        -ms-animation: fadein 0.3s;
+        -o-animation: fadein 0.3s;
+            animation: fadein 0.3s;
+    }
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      @-moz-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      @-ms-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      @-o-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      :root {
+        --fg: #17181c;
+        --shade1: #727274;
+        --shade2: #cccdd1;
+        --shade3: #f3f4f8;
+        --shade4: #ffffff;
+        --dur1: 1s;
+        --dur2: 6s;
+        font-size: calc(16px + (32 - 16)*(100vw - 320px)/(2560 - 320));
+    }
+
+    .shadow-lknxy {
+        --custom-unit: min(1vh, 1vw);
+        --border-radius-01: calc(2*var(--custom-unit));
+        --shade-01: #72727480;
+        --shade-02: #cccdd186;
+        --shade-03: #f3f4f87c;
+        --shade-04: #ffffff7c;
+
+        --shade-len-01: calc(0.3*var(--border-radius-01));
+        --shade-len-02: calc(0.5*var(--border-radius-01));
+
+
+        border-radius: var(--border-radius-01);
+        box-shadow:
+        var(--shade-len-01) var(--shade-len-01) var(--border-radius-01) var(--shade-04) inset,
+        calc(-1*var(--shade-len-01)) calc(-1*var(--shade-len-01)) var(--border-radius-01) var(--shade-01) inset,
+        var(--shade-len-02) var(--shade-len-02) var(--border-radius-01) var(--shade-01),
+        calc(-1*var(--shade-len-02)) calc(-1*var(--shade-len-02)) var(--border-radius-01) var(--shade-04);
+
+      }

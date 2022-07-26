@@ -2,25 +2,20 @@ import { html } from "htm/preact";
 import StyleNormalize from "/components/_app/StyleNormalize";
 import StyleCustom from "/components/_app/StyleCustom";
 import Layout from "/components/_app/Layout";
-import dynamic from "next/dynamic";
-
-const Head = dynamic(() => import("next/head"));
 
 
 export default function App({ Component, pageProps }) {
-  return html`<${Head}
-      ><title>SpeedWeb</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1"
-    /><//>
+  return html`
     <head>
+      <title>SpeedWeb</title>
+      <meta name="mobile-web-app-capable" content="yes"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
       <script async src="https://cdn.ampproject.org/v0.js"></script>
-      <script
-      async
-      custom-element="amp-sidebar"
-      src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
-    ></script>
-    <${StyleNormalize} />
-    <${StyleCustom} />
-    </head><body>
-    <${Layout}><${Component} ...${pageProps} /><//></body>`;
+      <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+      <${StyleNormalize} />
+      <${StyleCustom} />
+    </head>
+    <${Layout}><${Component} ...${pageProps} /><//>`;
 }

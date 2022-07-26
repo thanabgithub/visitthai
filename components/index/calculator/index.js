@@ -8,8 +8,7 @@ const Calculator = () => {
         <div class="display">
           <div id="displayDigit" class="txt--right bold">0</div>
         </div>
-      <div class="flex-container-row-hidden">hidden
-      </div>
+      <div class="flex-container-row-filler">      </div>
         <div class="flex-container-row adj-pos">
           <div class="calc-button">7</div>
           <div class="calc-button">8</div>
@@ -39,10 +38,7 @@ const Calculator = () => {
 
     <head>
 
-    <${Script} defer>
-
-
-
+    <${Script} strategy="lazyOnload">
     const defaultCondition = {
       displayDigit: "0",
       operator: null,
@@ -140,7 +136,7 @@ const Calculator = () => {
           align-items: center;
         }
 
-        flex-container-column {
+        .flex-container-column {
           display: flex;
           flex-direction: column;
 
@@ -154,13 +150,8 @@ const Calculator = () => {
           width: 100%;
           height: 19%;
         }
-        .flex-container-row-hidden {
-          display: flex;
-          width: 100%;
-          height: 3%;
-          appearance: none;
-          color: transparent;
-
+        .flex-container-row-filler {
+          flex-grow: 1;
         }
         .double,
         .calc-button {
@@ -244,44 +235,17 @@ const Calculator = () => {
           border-radius: 0.5rem;
           background: #f5f5f5;
           border: 1px #f5f5f5;
-          aspect-ratio: 0.65;
           box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-          height: min(80vh, 90vw/0.65);
-          width: auto;
+          max-height: min(80vh, calc(90vw/0.65));
+          aspect-ratio: 0.65;
+          max-width: calc(80vh*0.65);
           margin: auto;
-          -webkit-animation: fadein 0.3s;
-          -moz-animation: fadein 0.3s;
-           -ms-animation: fadein 0.3s;
-            -o-animation: fadein 0.3s;
-               animation: fadein 0.3s;
+
         }
 
 
 
-        @keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-        }
 
-        @-moz-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-        }
-
-        @-webkit-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-        }
-
-        @-ms-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-        }
-
-        @-o-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-        }
         #displayDigit {
           text-align: right;
         }
