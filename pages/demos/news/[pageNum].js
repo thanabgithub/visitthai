@@ -59,7 +59,7 @@ export default function Index({pageNumServer, cardsInfo}) {
         }
 
         .news--card-items--text--container {
-          height: max(calc(100vw*4/6*1/6/500*300),80px);
+          height: 1000px;
           width: 100%;
           padding: 0 var(--screen-cus-unit-nkq) 0 var(--screen-cus-unit-nkq);
         }
@@ -70,7 +70,6 @@ export default function Index({pageNumServer, cardsInfo}) {
         }
         .news--card-items--text--headline {
           display: block;
-          font-size: 1.05em;
         }
         .divider {
           margin: auto;
@@ -108,53 +107,21 @@ export default function Index({pageNumServer, cardsInfo}) {
         <//>
       <${OnOffSideAreaWrapper}>
         <div>
-            <div class="news--card--wrapper m0 p0">
-              <div class="grd news--card-items--fit m0 p0">
-                <div class="grd-row news--card-items--fit m0 p0 adj-pos">
-                  <div class="grd-row-col-1-6--sm news--card-items--fit">
-                    <amp-img
-                      alt="A view of the sea"
-                      src=${cardsInfo[0].thumbnail}
-                      layout="responsive"
-                      width=500
-                      height=300
-                    >
-                    </amp-img>
-                  </div>
-                  <div class="grd-row-col-5-6--sm news--card-items--fit">
-                    <div class="news--card-items--text--container">
-                      <div class="news--card-items--text--wrapper">
-                        <amp-fit-text layout="fill" min-font-size="16"><b class="news--card-items--text--headline">${cardsInfo[0].headline} </b>${cardsInfo[0].bodyText}</amp-fit-text>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <amp-img
+        alt="A view of the sea"
+        src=${cardsInfo[0].thumbnail}
+        layout="responsive"
+        width=500
+        height=300
+      >
+      </amp-img>
+        <div style="margin: calc(5*var(--screen-unit));">
+          <h1>${cardsInfo[0].headline} </h1>
+          <p> ${cardsInfo[0].bodyText}</p>
 
-            <div class="news--card--wrapper m0 p0">
-              <div class="grd news--card-items--fit m0 p0">
-                <div class="grd-row news--card-items--fit m0 p0 adj-pos">
-                  <div class="grd-row-col-1-6--sm news--card-items--fit">
-                    <amp-img
-                      alt="A view of the sea"
-                      src=${cardsInfo[1].thumbnail}
-                      layout="responsive"
-                      width=500
-                      height=300
-                    >
-                    </amp-img>
-                  </div>
-                  <div class="grd-row-col-5-6--sm news--card-items--fit">
-                    <div class="news--card-items--text--container">
-                      <div class="news--card-items--text--wrapper">
-                        <amp-fit-text layout="fill" min-font-size="16"><div class='ttt' ><b class="news--card-items--text--headline">${cardsInfo[1].headline} </b>${cardsInfo[1].bodyText}</div></amp-fit-text>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+
+
         </div>
       <//>
 
@@ -233,3 +200,26 @@ export async function getStaticProps(context) {
     }
   }
 
+//   <div class="news--card--wrapper m0 p0">
+//   <div class="grd news--card-items--fit m0 p0">
+//     <div class="grd-row news--card-items--fit m0 p0 adj-pos">
+//       <div class="grd-row-col-1-6--sm news--card-items--fit">
+//         <amp-img
+//           alt="A view of the sea"
+//           src=${cardsInfo[1].thumbnail}
+//           layout="responsive"
+//           width=500
+//           height=300
+//         >
+//         </amp-img>
+//       </div>
+//       <div class="grd-row-col-5-6--sm news--card-items--fit">
+//         <div class="news--card-items--text--container">
+//           <div class="news--card-items--text--wrapper">
+//             <amp-fit-text layout="fill" min-font-size="16"><div class='ttt' ><b class="news--card-items--text--headline">${cardsInfo[1].headline} </b>${cardsInfo[1].bodyText}</div></amp-fit-text>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
